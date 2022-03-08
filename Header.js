@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css";
+import "./Header.scss";
 import PersonIcon from "@mui/icons-material/Person";
 import { IconButton } from "@material-ui/core";
 import ForumIcon from "@mui/icons-material/Forum";

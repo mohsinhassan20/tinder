@@ -1,7 +1,7 @@
 import { Directions, SwipeDown } from "@mui/icons-material";
 import React, { useState } from "react";
 import TinderCard from "react-tinder-card";
-import "./TinderCards.css";
+import "./TinderCards.scss";
 
 function TinderCards() {
   const [people, setpeople] = useState([
