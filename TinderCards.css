@@ -24,10 +24,9 @@
   width: 100%;
   height: 100%;
 }
-.card h3
-{
+.card h3 {
   position: absoulte;
   bottom: 0;
   margin: 10px;
-  color: #fff;
+  color: black;
 }
