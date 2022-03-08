@@ -15,7 +15,7 @@ function TinderCards() {
     },
   ]);
 
-  const swipeDown = (Direction, nameToDelete) => {
+  const Swiped = (Direction, nameToDelete) => {
     console.log("removing" + nameToDelete);
   };
 
@@ -30,7 +30,7 @@ function TinderCards() {
             className="swipe"
             key={person.name}
             preventswipe={["up", "down"]}
-            onswipe={(dir) => SwipeDown(dir, person.name)}
+            onswipe={(dir) => Swiped(dir, person.name)}
             onCardLeftScreen={() => outOfFrame(person.name)}
           >
             <div
