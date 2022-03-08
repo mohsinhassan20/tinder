@@ -1,16 +1,17 @@
 import { Directions, SwipeDown } from "@mui/icons-material";
 import React, { useState } from "react";
+import TinderCard from "react-tinder-card";
 import "./TinderCards.css";
 
 function TinderCards() {
   const [people, setpeople] = useState([
     {
       name: "Mohsin",
-      URL: "https://tse1.mm.bing.net/th?id=OIP.23gnJYIxRYyTnacDs2mUXQHaHa&pid=Api&P=0&w=179&h=179",
+      url: "https://tse1.mm.bing.net/th?id=OIP.23gnJYIxRYyTnacDs2mUXQHaHa&pid=Api&P=0&w=179&h=179",
     },
     {
       name: "Hassan",
-      URL: "https://tse4.mm.bing.net/th?id=OIP.d-ZzZ7JwBoTqyjWGMAG9mAHaFj&pid=Api&P=0&w=236&h=177",
+      url: "https://tse4.mm.bing.net/th?id=OIP.d-ZzZ7JwBoTqyjWGMAG9mAHaFj&pid=Api&P=0&w=236&h=177",
     },
   ]);
 
@@ -25,19 +26,21 @@ function TinderCards() {
     <div className="tinderCards">
       <div className="tindercards__Cardcontainer">
         {people.map((person) => (
-          <TinderCards
+          <TinderCard
             className="swipe"
             key={person.name}
             preventswipe={["up", "down"]}
             onswipe={(dir) => SwipeDown(dir, person.name)}
-            onCardLeftScreen={() => outOfFrame(character.name)}
-          ></TinderCards>
+            onCardLeftScreen={() => outOfFrame(person.name)}
+          >
+            <div
+              style={{ backgoundImage: `url(${person.url})` }}
+              className="card"
+            >
+              <h3>{person.name}</h3>
+            </div>
+          </TinderCard>
         ))}
-
-        <div
-          style={{ backgoundImage: `url(${person.url})` }}
-          className="card"
-        ></div>
       </div>
     </div>
   );
