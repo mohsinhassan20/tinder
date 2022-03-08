@@ -9,10 +9,6 @@ function TinderCards() {
       name: "Mohsin",
       url: "https://tse1.mm.bing.net/th?id=OIP.23gnJYIxRYyTnacDs2mUXQHaHa&pid=Api&P=0&w=179&h=179",
     },
-    {
-      name: "Hassan",
-      url: "https://tse4.mm.bing.net/th?id=OIP.d-ZzZ7JwBoTqyjWGMAG9mAHaFj&pid=Api&P=0&w=236&h=177",
-    },
   ]);
 
   const swiped = (Direction, nameToDelete) => {
