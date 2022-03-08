@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import "./SwipeButtons";
 import Header from "./Header";
 import TinderCards from "./TinderCards";
