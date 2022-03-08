@@ -7,11 +7,15 @@ function TinderCards() {
   const [people, setpeople] = useState([
     {
       name: "Mohsin",
-      url: "https://tse1.mm.bing.net/th?id=OIP.23gnJYIxRYyTnacDs2mUXQHaHa&pid=Api&P=0&w=179&h=179",
+      url: "https://m.media-amazon.com/images/I/91G00NOgKYL._AC_UL480_FMwebp_QL65_.jpg",
+    },
+    {
+      name: "Jeff Bezzos",
+      url: "https://m.media-amazon.com/images/I/81PyY78yuNL._AC_UL480_FMwebp_QL65_.jpg",
     },
   ]);
 
-  const swiped = (Direction, nameToDelete) => {
+  const swipeDown = (Direction, nameToDelete) => {
     console.log("removing" + nameToDelete);
   };
 
@@ -30,8 +34,8 @@ function TinderCards() {
             onCardLeftScreen={() => outOfFrame(person.name)}
           >
             <div
-              style={{ backgoundImage: `url(${person.url})` }}
               className="card"
+              style={{ backgoundImage: `url(${person.url})` }}
             >
               <h3>{person.name}</h3>
             </div>
